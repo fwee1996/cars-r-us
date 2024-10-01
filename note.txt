@@ -1,0 +1,50 @@
+$ json-server database.json -p 8088
+
+
+
+//if you need to check if paint, tech, interior, wheels exist on the order first before trying to access it:
+let ordersHTML = orders.map((order) => {
+    let orderPrice = 0;
+
+    // Check if paint exists before accessing its price
+    if (order.paint) {
+        orderPrice += order.paint.price;
+    }
+
+    // Check if interior exists before accessing its price
+    if (order.interior) {
+        orderPrice += order.interior.price;
+    }
+
+    // Check if technology exists before accessing its price
+    if (order.technology) {
+        orderPrice += order.technology.price;
+    }
+
+    // Check if wheel exists before accessing its price
+    if (order.wheel) {
+        orderPrice += order.wheel.price;
+    }
+
+    return `<div>
+        <input type='radio' name='order' value='${order.id}' /> Order#${order.id} costs ${orderPrice}
+    </div>`;
+}).join("");
+
+
+
+
+ {
+      "id": 1,
+      "paintId": 1,
+      "interiorId": 2,
+      "technologyId": 4,
+      "wheelId": 2
+    },
+    {
+      "id": 2,
+      "paintId": 2,
+      "interiorId": 2,
+      "technologyId": 1,
+      "wheelId": 1
+    }

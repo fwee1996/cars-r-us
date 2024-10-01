@@ -1,0 +1,74 @@
+
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}
+
+
+.order {    
+    margin-bottom: 20px; 
+    background-color: rgba(204, 236, 254, 0.405);
+    padding: 1rem;
+    border: 1px dashed rgb(19, 154, 172);
+    flex-basis: 80%;
+}
+
+.button{margin-top: 40px;
+    margin-left: 250px;
+}
+
+#saveCustomOrder{
+    background-color: #0c4e3c;
+    padding: 5px;
+    color: white;
+}
+
+
+/* Style for each option section */
+.options {
+    /* flex-basis: calc(50% - 20px); Adjust width to fit two sections in a row */
+    padding: 10px; 
+    border: 1px dashed #2181e8; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: #f8fadb; 
+    margin-right: 20px;
+    margin-top: 20px;
+    
+}
+
+
+/* Style for the custom orders section */
+.customOrders {
+    margin-top: 20px; /* Add margin at the top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    
+.choices{display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.choices__paints.options,
+.choices__wheels.options{
+    margin-bottom: 40px;
+}
+
